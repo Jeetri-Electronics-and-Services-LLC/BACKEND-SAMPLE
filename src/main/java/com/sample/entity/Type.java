@@ -1,6 +1,3 @@
-
-
-
 package com.sample.entity;
 
 import jakarta.persistence.Entity;
@@ -15,7 +12,7 @@ public class Type {
     private int id;
     private String type;
 
-    // Getters and Setters
+    
     public int getId() {
         return id;
     }

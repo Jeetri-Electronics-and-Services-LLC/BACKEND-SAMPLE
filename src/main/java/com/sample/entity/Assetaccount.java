@@ -12,7 +12,7 @@ public class Assetaccount {
     private int id;
     private String name;
 
-    // Getters and setters
+   
     public int getId() {
         return id;
     }

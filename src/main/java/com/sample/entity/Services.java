@@ -16,7 +16,7 @@ public class Services {
 	String description;
 	double salesprice;
 	double salestax;
-	//String purchasinginformation;
+	
 	private String category_id;
 	private String income_account_id;
 	
