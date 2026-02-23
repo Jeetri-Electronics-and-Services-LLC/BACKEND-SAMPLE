@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //package com.sample.controller;
 
 //
@@ -195,6 +196,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+=======
+package com.sample.controller;
+
+import java.util.List;
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -202,7 +208,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.sample.entity.Bundle;
+<<<<<<< HEAD
 import com.sample.entity.BundleRequestDTO;
+=======
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125
 import com.sample.service.BundleService;
 
 @RestController
@@ -211,8 +220,18 @@ public class BundleController {
 
     @Autowired
     private BundleService bundleService;
+<<<<<<< HEAD
 
     // Create a new bundle
+=======
+    
+
+  @GetMapping("/getbundle")
+  public List<Bundle> getAllBundleData() {
+    return bundleService.getAllBundles();
+  }
+
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125
     @PostMapping("/addbundle")
     public ResponseEntity<Bundle> addBundle(@RequestBody Bundle bundle) {
         try {
@@ -223,6 +242,7 @@ public class BundleController {
         }
     }
 
+<<<<<<< HEAD
     // Get all bundles along with products
     @PostMapping("/all")
     public ResponseEntity<List<Bundle>> getAllBundles() {
@@ -333,3 +353,18 @@ public class BundleController {
         return ResponseEntity.ok(response);
     }
 }
+=======
+    @PutMapping("/updatebundle/{id}")
+    public ResponseEntity<Bundle> updateBundle(@PathVariable Long id, @RequestBody Bundle bundle) {
+        try {
+            Bundle updatedBundle = bundleService.updateBundle(id, bundle);
+            return ResponseEntity.ok(updatedBundle);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+}
+
+
+
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125

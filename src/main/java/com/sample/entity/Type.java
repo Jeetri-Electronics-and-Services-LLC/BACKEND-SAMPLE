@@ -12,7 +12,10 @@ public class Type {
     private int id;
     private String type;
 
+<<<<<<< HEAD
       // Getters And Setters
+=======
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125
     
     public int getId() {
         return id;

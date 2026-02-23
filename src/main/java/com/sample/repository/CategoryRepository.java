@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.sample.repository;
 
 import java.util.List;
@@ -16,3 +17,14 @@ public interface CategoryRepository extends JpaRepository<Category, Integer> {
     List<CategoryDTO1> findCategoryIdsAndNamesByBrandId(int brandId);
 		
 }
+=======
+package com.sample.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.sample.entity.Category;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
+	
+	
+}
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125

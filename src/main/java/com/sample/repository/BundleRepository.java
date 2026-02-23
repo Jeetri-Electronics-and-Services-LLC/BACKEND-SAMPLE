@@ -1,6 +1,7 @@
 package com.sample.repository;
 
 import com.sample.entity.Bundle;
+<<<<<<< HEAD
 
 import java.util.List;
 import java.util.Optional;
@@ -27,4 +28,9 @@ public interface BundleRepository extends JpaRepository<Bundle, Long> {
 	           "FROM Bundle b JOIN b.products p WHERE b.name = :bundleName")
 	    List<Object[]> findBundleDetailsByName(String bundleName);
 	
+=======
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BundleRepository extends JpaRepository<Bundle, Long> {
+>>>>>>> 8bfaa7541c83154cb3d6764d7c184976329f6125
 }
